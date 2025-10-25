@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikram | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ====== RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #020202;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background:  rgba(0, 26, 37,0.5);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 105px;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 70px;
+      width: auto;
+    }
+
+    .logo h1 {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ddd;
+      margin: 0 18px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d5a978;
+    }
+
+    .contact-btn {
+      padding: 8px 18px;
+      border: 1px solid #fff;
+      border-radius: 15px;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s;
+    }
+
+    .contact-btn:hover {
+      background-color:#d5a978;
+      color: #000;
+      border-color: #d5a978;
+    }
+
+    /* ====== HERO SECTION ====== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  /* ✅ Ajout d'une image de fond */
+  background: 
+    linear-gradient(to bottom, rgba(0, 26, 37 , 0.9), rgba(0, 26, 37,0.9)),
+    url("{% static 'playground/images/back2.avif' %}") center/cover no-repeat;
+
+  /* Effet de dégradé et couleurs dynamiques */
+}
+
+  .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #d5a978;
+      line-height: 1.2;
+    }
+    .hero h2 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #d5a978;
+      line-height: 1.2;
+    }
+
+    .hero h2 span {
+      color: #d5a978;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 700px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+.hero button {
+  background: transparent;
+  color: #d5a978;
+  border: 2px solid #d5a978;  /* thicker border */
+  padding: 18px 45px;         /* more padding */
+  border-radius: 20px;
+  font-size: 20px;            /* larger text */
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+
+    .hero button:hover {
+      background-color: #d5a978;
+      color: #ffffff;
+      border-color: #d5a978;
+      transform: scale(1.05);
+    }
+
+
+
+    @keyframes twinkle {
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 30px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        padding: 0 20px;
+      }
+    }
+
+    .hero-image {
+  width: 160px;
+  height: auto;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 209, 255, 0.3);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Animation flottante douce */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="{% static 'playground/images/logo4.png' %}" alt="Ikram Logo">
+      <h1></h1>
+    </div>
+    <nav>
+      <a href="#home">Accueil</a>
+      <a href="#about">À propos</a>
+      <a href="#services">Servives</a>
+      <a href="#contact" class="contact-btn">Nous contacter</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="stars"></div>
+    <h2>Entreprise spécialisée en <br>rénovation et <span>fournitures.</span></h2>
+    <p>Nous vous garantissons un service fiable , un travail soigné, des matériaux de qualité , une satisfaction totale et le respect de vos délais.</p>
+    <button>Nous contacter</button>
+  </section>
+
+  <!-- <script>
+    // Subtle color glow animation
+    const hero = document.querySelector('.hero');
+    let hue = 200;
+
+    function animateGlow() {
+      hue = (hue + 0.2) % 360;
+      hero.style.background = `radial-gradient(circle at 30% 20%, hsla(${hue}, 100%, 60%, 0.15), transparent 60%),
+                               radial-gradient(circle at 80% 50%, hsla(${(hue + 180) % 360}, 100%, 60%, 0.1), transparent 70%)`;
+      requestAnimationFrame(animateGlow);
+    }
+    animateGlow();
+  </script> -->
+</body>
+</html>

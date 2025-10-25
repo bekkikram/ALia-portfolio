@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alia Abderaouf</title>
+
+  <!-- Favicon (logo onglet) -->
+  <link rel="icon" type="image/png" href="{% static 'playground/images/logo5.png' %}">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+  
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #11141a;
+      text-align: center;
+      padding: 20px 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    footer .socials {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 15px;
+    }
+
+    footer .socials a {
+      color: #d5a978;
+      font-size: 1.4rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    footer .socials a:hover {
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    footer p {
+      color: #999;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    /* Offset pour header fixe */
+    section {
+      scroll-margin-top: 90px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- SECTIONS -->
+  {% include 'hero.html' %}
+  {% include 'about.html' %}
+  {% include 'services.html' %}
+  {% include 'contact.html' %}
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="socials">
+      <a href="mailto:raoufalia96@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/raoufalia" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="tel:+213776354791" title="Téléphone"><i class="fa-solid fa-phone"></i></a>
+    </div>
+    <p>© 2025 <strong>IB Renovation</strong>. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+{% load static %}
+
+<section id="about" class="about">
+  <style>
+    /* === STYLE POUR LA SECTION ABOUT === */
+
+    .about {
+      background: #001a25;
+      color: #f4f4f4;
+      padding: 50px 10%;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+    }
+
+    .about-content {
+      flex: 1 1 500px;
+    }
+
+    .about h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+            text-align: center;
+
+      margin-bottom: 10px;
+    }
+
+    .about h2 span {
+      color: #d5a978;
+    }
+
+    .about-subtitle {
+      color: #d5a978;
+      font-size: 1rem;
+                  text-align: center;
+
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      line-height: 1.7;
+      color: #ffffff;
+      font-size: 1rem;
+                  text-align: center;
+
+      margin-bottom: 20px;
+    }
+
+    .about .highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .highlight {
+      background: transparent;
+      padding: 20px;
+            border: 1px solid #d5a978;
+
+      border-radius: 14px;
+      text-align: center;
+      flex: 1 1 150px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .highlight:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .highlight h3 {
+      color: #ffffff;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .highlight p {
+      color: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    .about-img {
+      flex: 1 1 350px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-img img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 198, 255, 0.2);
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 900px) {
+      .about {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 70px 6%;
+      }
+
+      .highlight {
+        flex: 1 1 45%;
+      }
+
+      .about-img img {
+        max-width: 280px;
+      }
+    }
+  </style>
+
+  <div class="about-content">
+    <h2><span>À propos</span> de Nous</h2>
+    <p class="about-subtitle">Créée en 2022, notre entreprise s’impose comme un acteur incontournable dans le domaine de la rénovation complète et de la construction spécialisée. </p>
+    <p>
+      Nous intervenons sur tout type de projet — maisons,
+       villas, hôpitaux, blocs opératoires, blocs d’accouchement, laboratoires, salles de soins, et bien plus encore — en offrant des solutions clés en main, alliant qualité, sécurité et professionnalisme.
+        Nos services couvrent l’ensemble des travaux de rénovation intérieure et extérieure, ainsi que les installations techniques : chauffagerie, climatisation centrale, froid industriel, chambres froides, réseaux téléphoniques, installations électriques, groupes électrogènes, ventilation et maintenance technique. 
+    </p>
+    <p>
+      Nous proposons également une large gamme de fournitures et d’équipements professionnels,
+       notamment les équipements de cuisine et de cantine, ustensiles de cuisine, mobilier de bureau, fournitures de papeterie, matériel de plomberie, quincaillerie, droguer et appareils d'électroménagers
+    </p>
+    <p>
+       Tous nos projets sont réalisés selon un plan architectural professionnel, conçu par nos architectes et techniciens qualifiés pour garantir la qualité, la durabilité et la conformité des travaux.
+        Les modalités de paiement sont simples et sécurisées : en espèces, par chèque bancaire certifié ou par virement bancaire, selon les préférences de nos clients.
+         Un contrat clair et négocié entre le contractant et le cocontractant encadre chaque projet,
+          assurant transparence, fiabilité et respect des engagements. Notre priorité est de bâtir une relation de confiance durable avec nos clients et partenaires, fondée sur la qualité du service, le respect des délais et la satisfaction totale. 
+    </p>
+
+    <div class="highlights">
+      <div class="highlight">
+        <h3>+4</h3>
+        <p>Années d’expérience</p>
+      </div>
+      <div class="highlight">
+        <h3>+35</h3>
+        <p>Projets réalisés</p>
+      </div>
+      <div class="highlight">
+        <h3>100%</h3>
+        <p>Engagement & Passion</p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
